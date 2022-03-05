@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CosmicSugar</title>
 </head>
+<style>
+    tr{
+        text-align: center;
+        background-color: green;
+    }
+    th{
+        width: 50%;
+    }
+</style>
 <body style="background-color: #f9eac3;">
     <div style="background-color: #dbbdff;">
         <img src="#" alt="Logo CosmicSugar">
@@ -18,6 +27,141 @@
     </div>
 <br><br>
     <div style="background-color: #ffbdfd">
+        <hr>
+        <table style="width: 100%;">
+            <tr>
+                <th colspan="4" style="text-align: center;"><h2>Pasteles</h2></th>
+            </tr>
+            <tr>
+                <th>Sabores</th>
+                <th colspan="3">Precios</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Chico</td>
+                <td>Mediano</td>
+                <td>Grande</td>
+            </tr>
+            <tr>
+                <td>Chocolate</td>
+                <td>$ 300</td>
+                <td>$ 350</td>
+                <td>$ 400</td>
+            </tr>
+            <tr>
+                <td>Vainilla</td>
+                <td>$ 300</td>
+                <td>$ 350</td>
+                <td>$ 400</td>
+            </tr>
+            <tr>
+                <td>Cafe</td>
+                <td>$ 350</td>
+                <td>$ 400</td>
+                <td>$ 450</td>
+            </tr>
+            <tr>
+                <td>3 Leches</td>
+                <td>$ 330</td>
+                <td>$ 380</td>
+                <td>$ 420</td>
+            </tr>
+            <tr>
+                <td>Zanahoria</td>
+                <td>$ 230</td>
+                <td>$ 280</td>
+                <td>$ 320</td>
+            </tr>
+        </table>
+        <br><br><hr>
+
+        <table style="width: 100%;">
+            <tr>
+                <th colspan="2" style="text-align: center;"><h2>Decoracion</h2></th>
+            </tr>
+            <tr>
+                <th>Extras</th>
+                <th>Precios</th>
+            </tr>
+            <tr>
+                <td>Frutos</td>
+                <td>$ 30</td>
+            </tr>
+            <tr>
+                <td>Chocolate derretido</td>
+                <td>$ 50</td>
+            </tr>
+            <tr>
+                <td>Cocoa</td>
+                <td>$ 30</td>
+            </tr>
+            <tr>
+                <td>Coco</td>
+                <td>$ 35</td>
+            </tr>
+            <tr>
+                <td>Menta</td>
+                <td>$ 33</td>
+            </tr>
+        </table>
+        <br><br><hr>
+        
+        <form action="" id="Pedidos" method="post">
+            <table style="width: 100%;">
+                <tr><th colspan="5" style="text-align: center;"><h2>Pedidos</h2></th></tr>
+                <tr><th colspan="5" style="text-align: center;">Combinalos como quieras!</th></tr>
+    
+                <tr>
+                    <th>Sabores</th>
+                    <th>Extras</th>
+                    <th>Chico</th>
+                    <th>Mediano</th>
+                    <th>Grande</th>
+                </tr>
+                <tr>
+                    <td>Chocolate</td>
+                    <td><input type="checkbox">Frutos</td>
+                    <td><input type="radio" id="chocolate" name="chocolate" value="chico"></td>
+                    <td><input type="radio" id="chocolate" name="chocolate" value="mediano"></td>
+                    <td><input type="radio" id="chocolate" name="chocolate" value="grande"></td>
+                </tr>
+                <tr>
+                    <td>Vainilla</td>
+                    <td><input type="checkbox">Chocolate derretido</td>
+                    <td><input type="radio" id="vainilla" name="vainilla" value="chico"></td>
+                    <td><input type="radio" id="vainilla" name="vainilla" value="mediano"></td>
+                    <td><input type="radio" id="vainilla" name="vainilla" value="grande"></td>
+                </tr>
+                <tr>
+                    <td>Cafe</td>
+                    <td><input type="checkbox">Cocoa</td>
+                    <td><input type="radio" id="cafe" name="cafe" value="chico"></td>
+                    <td><input type="radio" id="cafe" name="cafe" value="mediano"></td>
+                    <td><input type="radio" id="cafe" name="cafe" value="grande"></td>
+                </tr>
+                <tr>
+                    <td>3 Leches</td>
+                    <td><input type="checkbox">Coco</td>
+                    <td><input type="radio" id="3leches" name="3leches" value="chico"></td>
+                    <td><input type="radio" id="3leches" name="3leches" value="mediano"></td>
+                    <td><input type="radio" id="3leches" name="3leches" value="grande"></td>
+                </tr>
+                <tr>
+                    <td>Zanahoria</td>
+                    <td><input type="checkbox">Menta</td>
+                    <td><input type="radio" id="zanahoria" name="zanahoria" value="chico"></td>
+                    <td><input type="radio" id="zanahoria" name="zanahoria" value="mediano"></td>
+                    <td><input type="radio" id="zanahoria" name="zanahoria" value="grande"></td>
+                </tr>
+            </table>
+            <input type="submit" onclick="alert('Pedido realizado')">
+            <input type="reset">
+        </form>
+        <br><br><hr>
+
+
+
+
         <table>
             <tr>
                 <th><h1>Pasteles</h1></th>
@@ -37,8 +181,20 @@
                     <label for="Decoraciones">Decoraciones</label>
                     </div>
                 </td>
+            </tr>
+            <br><br>
+            <tr>
                 <td>
                     <label for="Configuracion">Configuracion</label>
+                    <br><br>
+                    <label for="Pasteles">Pasteles</label>
+                    <select name="TiposPastel" id="TiposPastel">
+                        <option value="null"></option>
+                        <option value="Chocolate">Chocolate $250</option>
+                        <option value="Vainilla">Vainilla $250</option>
+                        <option value="3Leches">3 Leches $250</option>
+                        <option value="Zanahoria">Zanahoria $180</option>
+                    </select>
                     <br><br>
                     <label for="CantidadPasteles">Cantidad de Pasteles</label>
                     <input type="number" name="CantidadPasteles">
@@ -48,27 +204,29 @@
                             <input type="checkbox" id="Decoracion1" name="Decoracion1" value="Deco1">
                             <label for="Decoracion1">Chocolate</label>
                         </dt>
-                        <dd>Capa de chocolate extra + $5</dd>
+                        <dd>Capa de chocolate extra + $20</dd>
                         <dt>
                             <input type="checkbox" id="Decoracion2" name="Decoracion2" value="Deco2">
                             <label for="Decoracion2">Fondant</label>
                         </dt>
+                        <dd>Cubierta + $15</dd>
                         <dt>
                             <input type="checkbox" id="Decoracion3" name="Decoracion3" value="Deco3">
                             <label for="Decoracion3">Almendras</label>
                         </dt>
+                        <dd>Hojuelas (50g) + $45</dd>
                         <dt>
                             <input type="checkbox" id="Decoracion4" name="Decoracion4" value="Deco4">
                             <label for="Decoracion4">Chispas</label>
                         </dt>
+                        <dd>Chispas de colores sabor chocolate + $10</dd>
                     </dl>
-                    
-                    
-                    
-                    
                 </td>
+
             </tr>
         </table>
+
+
     </div>
 </body>
 </html>
